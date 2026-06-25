@@ -175,9 +175,9 @@ L'application est accessible sur http://localhost:3000.
 
 ### Légende
 
-· La légende s'affiche automatiquement
-· Cliquer sur "📋 Cacher" pour la masquer
-· Changer la position via le sélecteur déroulant
+- La légende s'affiche automatiquement
+- Cliquer sur "📋 Cacher" pour la masquer
+- Changer la position via le sélecteur déroulant
 
 ### Graph Grammar (avancé)
 
