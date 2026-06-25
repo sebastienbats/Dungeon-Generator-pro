@@ -1,4 +1,4 @@
-# 🏰 Dungeon Generator App
+# 🏰 Dungeon Generator Pro
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react)](https://reactjs.org/)
@@ -128,7 +128,7 @@
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/sebastienbats/Dungeon-Generator-App.git
+git clone https://github.com/sebastienbats/Dungeon-Generator-Pro.git
 cd Dungeon-Generator-App
 
 # Backend
