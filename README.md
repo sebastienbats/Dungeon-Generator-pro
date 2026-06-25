@@ -29,7 +29,7 @@
 
 ## 🎯 Aperçu
 
-**Dungeon Generator App** est une application web complète permettant de générer procéduralement des donjons avec :
+**Dungeon Generator Pro** est une application web complète permettant de générer procéduralement des donjons avec :
 
 - **8 algorithmes de génération** (dont Graph Grammar avancé)
 - **Gestion des tuiles personnalisées** via une interface dédiée
