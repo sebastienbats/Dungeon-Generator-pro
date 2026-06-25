@@ -154,32 +154,32 @@ L'application est accessible sur http://localhost:3000.
 
 🎮 Utilisation
 
-Génération d'un donjon
+- Génération d'un donjon
 
 1. Sélectionner un algorithme dans le menu déroulant
 2. Ajuster les paramètres avec les sliders
 3. Cliquer sur "Générer"
 
-Gestion des tuiles
+- Gestion des tuiles
 
 1. Cliquer sur "🎨 Tuiles"
 2. Ajouter une nouvelle tuile (nom, couleur, icône)
 3. Modifier ou supprimer une tuile existante
 
-Gestion des calques
+- Gestion des calques
 
 1. Cliquer sur "📂 Calques"
 2. Activer/désactiver la visibilité d'un calque via le toggle
 3. Ajouter un nouveau calque (nom)
 4. Supprimer un calque (hors "main")
 
-Légende
+- Légende
 
 · La légende s'affiche automatiquement
 · Cliquer sur "📋 Cacher" pour la masquer
 · Changer la position via le sélecteur déroulant
 
-Graph Grammar (avancé)
+- Graph Grammar (avancé)
 
 1. Sélectionner "🧠 Graph Grammar" dans le menu des algorithmes (ou cliquer sur le bouton dédié)
 2. Ajuster les paramètres (itérations, espacement, max nœuds, type de départ)
@@ -243,7 +243,7 @@ GET /api/exports/download/:filename Télécharge un export
 
 🧩 Gestion des tuiles
 
-Structure d'une tuile
+- Structure d'une tuile
 
 ```json
 {
@@ -258,15 +258,15 @@ Structure d'une tuile
 
 📂 Gestion des calques
 
-· Le calque main est créé par défaut et ne peut pas être supprimé.
-· Chaque calque possède une propriété visible (booléen) contrôlée par un toggle.
-· Les tuiles sont stockées dans un tableau au sein de chaque calque.
+- Le calque main est créé par défaut et ne peut pas être supprimé.
+- Chaque calque possède une propriété visible (booléen) contrôlée par un toggle.
+- Les tuiles sont stockées dans un tableau au sein de chaque calque.
 
 ---
 
 🧠 Graph Grammar
 
-L'algorithme Graph Grammar permet une génération très flexible grâce à des règles de réécriture de graphe.
+- L'algorithme Graph Grammar permet une génération très flexible grâce à des règles de réécriture de graphe.
 
 Règles prédéfinies
 
@@ -280,18 +280,19 @@ Niveau hiérarchique Ajoute une salle de niveau supérieur
 
 Contexte des règles (ctx)
 
-Propriété Description
-node Nœud courant
-createNode(x, y, type, level) Ajoute une nouvelle salle
-addCorridor(nodeA, nodeB, type, props) Trace un couloir (standard, large, door, secret)
-addSymmetrical(node, axis) Crée des symétriques (x, y, both)
-findFreeDirection(node) Trouve une direction libre
-isPositionFree(x, y) Vérifie si une position est libre
-solLayer, murLayer, corridorLayer Calques pour dessiner
-w, h Dimensions du donjon
-spacing Espacement entre les salles
+|Propriété|Description|
+|---------|-----------|
+|node|Nœud courant|
+|createNode(x, y, type, level)|Ajoute une nouvelle salle|
+|addCorridor(nodeA, nodeB, type, props)|Trace un couloir (standard, large, door, secret)|
+|addSymmetrical(node, axis)|Crée des symétriques (x, y, both)|
+|findFreeDirection(node)|Trouve une direction libre|
+|isPositionFree(x, y)|Vérifie si une position est libre|
+|solLayer, murLayer, corridorLayer|Calques pour dessiner|
+|w, h|Dimensions du donjon|
+|spacing|Espacement entre les salles|
 
-Exemple de règle personnalisée
+- Exemple de règle personnalisée
 
 ```javascript
 (ctx) => {
