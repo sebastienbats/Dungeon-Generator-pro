@@ -152,34 +152,34 @@ L'application est accessible sur http://localhost:3000.
 
 ---
 
-🎮 Utilisation
+## 🎮 Utilisation
 
-- Génération d'un donjon
+### Génération d'un donjon
 
 1. Sélectionner un algorithme dans le menu déroulant
 2. Ajuster les paramètres avec les sliders
 3. Cliquer sur "Générer"
 
-- Gestion des tuiles
+### Gestion des tuiles
 
 1. Cliquer sur "🎨 Tuiles"
 2. Ajouter une nouvelle tuile (nom, couleur, icône)
 3. Modifier ou supprimer une tuile existante
 
-- Gestion des calques
+### Gestion des calques
 
 1. Cliquer sur "📂 Calques"
 2. Activer/désactiver la visibilité d'un calque via le toggle
 3. Ajouter un nouveau calque (nom)
 4. Supprimer un calque (hors "main")
 
-- Légende
+### Légende
 
 · La légende s'affiche automatiquement
 · Cliquer sur "📋 Cacher" pour la masquer
 · Changer la position via le sélecteur déroulant
 
-- Graph Grammar (avancé)
+### Graph Grammar (avancé)
 
 1. Sélectionner "🧠 Graph Grammar" dans le menu des algorithmes (ou cliquer sur le bouton dédié)
 2. Ajuster les paramètres (itérations, espacement, max nœuds, type de départ)
@@ -189,7 +189,7 @@ L'application est accessible sur http://localhost:3000.
 
 ---
 
-📁 Structure du projet
+## 📁 Structure du projet
 
 ```
 dungeon-generator-app/
@@ -226,7 +226,7 @@ dungeon-generator-app/
 
 ---
 
-🔌 API Backend
+## 🔌 API Backend
 
 Méthode Endpoint Description
 GET /api/tiles Récupère toutes les tuiles
@@ -241,9 +241,9 @@ GET /api/exports/download/:filename Télécharge un export
 
 ---
 
-🧩 Gestion des tuiles
+## 🧩 Gestion des tuiles
 
-- Structure d'une tuile
+### Structure d'une tuile
 
 ```json
 {
@@ -256,7 +256,7 @@ GET /api/exports/download/:filename Télécharge un export
 
 ---
 
-📂 Gestion des calques
+## 📂 Gestion des calques
 
 - Le calque main est créé par défaut et ne peut pas être supprimé.
 - Chaque calque possède une propriété visible (booléen) contrôlée par un toggle.
@@ -264,21 +264,21 @@ GET /api/exports/download/:filename Télécharge un export
 
 ---
 
-🧠 Graph Grammar
+## 🧠 Graph Grammar
 
 - L'algorithme Graph Grammar permet une génération très flexible grâce à des règles de réécriture de graphe.
 
-Règles prédéfinies
+### Règles prédéfinies
 
-Règle Description
-Enfilade simple Ajoute une salle en ligne droite
-Enfilade symétrique Ajoute une salle et son symétrique
-Couloir large Ajoute un couloir de 3 tuiles de large
-Couloir avec porte Ajoute un couloir avec une porte à mi-chemin
-Passage secret Ajoute un passage secret entre deux salles
-Niveau hiérarchique Ajoute une salle de niveau supérieur
+### Règle Description
+- Enfilade simple Ajoute une salle en ligne droite
+- Enfilade symétrique Ajoute une salle et son symétrique
+- Couloir large Ajoute un couloir de 3 tuiles de large
+- Couloir avec porte Ajoute un couloir avec une porte à mi-chemin
+- Passage secret Ajoute un passage secret entre deux salles
+- Niveau hiérarchique Ajoute une salle de niveau supérieur
 
-Contexte des règles (ctx)
+### Contexte des règles (ctx)
 
 |Propriété|Description|
 |---------|-----------|
@@ -309,7 +309,7 @@ Contexte des règles (ctx)
 
 ---
 
-🧮 Algorithmes de génération
+## 🧮 Algorithmes de génération
 
 Algorithme Description
 rooms Salles rectangulaires + couloirs en L
@@ -323,7 +323,7 @@ graph-grammar Réécriture de graphe avec règles personnalisables
 
 ---
 
-📝 Licence
+## 📝 Licence
 
 Distribué sous licence MIT. Voir LICENSE pour plus d'informations.
 
