@@ -228,16 +228,17 @@ dungeon-generator-app/
 
 ## 🔌 API Backend
 
-Méthode Endpoint Description
-GET /api/tiles Récupère toutes les tuiles
-POST /api/tiles Ajoute une tuile
-PUT /api/tiles/:id Modifie une tuile
-DELETE /api/tiles/:id Supprime une tuile
-POST /api/save-svg Sauvegarde un SVG
-POST /api/save-png Sauvegarde un PNG
-GET /api/exports Liste les exports
-DELETE /api/exports/:filename Supprime un export
-GET /api/exports/download/:filename Télécharge un export
+|Méthode|Endpoint|Description|
+|-------|--------|-----------|
+|GET|/api/tiles|Récupère toutes les tuiles|
+|POST|/api/tiles|Ajoute une tuile|
+|PUT|/api/tiles/:id|Modifie une tuile|
+|DELETE|/api/tiles/:id|Supprime une tuile|
+|POST|/api/save-svg|Sauvegarde un SVG|
+|POST|/api/save-png|Sauvegarde un PNG|
+|GET|/api/exports Liste les exports|
+|DELETE|/api/exports/:filename|Supprime un export|
+|GET|/api/exports/download/:filename|Télécharge un export|
 
 ---
 
@@ -311,15 +312,16 @@ GET /api/exports/download/:filename Télécharge un export
 
 ## 🧮 Algorithmes de génération
 
-Algorithme Description
-rooms Salles rectangulaires + couloirs en L
-bsp Partitionnement binaire de l'espace
-sinuous Couloirs sinueux avec salles occasionnelles
-cellular Automates cellulaires (cavernes)
-drunkard Marches aléatoires multiples
-dla Agrégation limitée par diffusion
-dla-symmetry DLA avec symétrie axiale
-graph-grammar Réécriture de graphe avec règles personnalisables
+|Algorithme|Description|
+|----------|-----------|
+|rooms|Salles rectangulaires + couloirs en L|
+|bsp|Partitionnement binaire de l'espace
+|sinuous|Couloirs sinueux avec salles occasionnelles|
+|cellular|Automates cellulaires (cavernes)|
+|drunkard|Marches aléatoires multiples|
+|dla|Agrégation limitée par diffusion|
+|dla-symmetry|DLA avec symétrie axiale|
+|graph-grammar|Réécriture de graphe avec règles personnalisables|
 
 ---
 
