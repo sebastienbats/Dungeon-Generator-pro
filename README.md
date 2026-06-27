@@ -207,6 +207,18 @@ L'application est accessible sur http://localhost:3000.
 4. Ajouter ou modifier des règles personnalisées
 5. Cliquer sur "Générer avec Graph Grammar"
 
+#### L-Systems (salles rondes)
+1. Sélectionner "🌿 L-Systems" dans le menu
+2. Choisir un préréglage (Cercle, Spirale, etc.)
+3. Ajuster les paramètres (itérations, taille du pas, angle, remplissage)
+4. Cliquer sur "Générer"
+
+#### Gestion des collisions
+1. Cliquer sur "🧱 Collisions"
+2. Sélectionner un mode : Vue, Édition ou Chemin
+3. Interagir avec la grille pour visualiser ou modifier les collisions
+4. Exporter les données en JSON
+
 ---
 
 ## 📁 Structure du projet
