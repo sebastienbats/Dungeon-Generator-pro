@@ -148,7 +148,7 @@
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/sebastienbats/Dungeon-Generator-Pro.git
+git clone https://github.com/sebastienbats/Dungeon-Generator-pro.git
 cd Dungeon-Generator-App
 
 # Backend
