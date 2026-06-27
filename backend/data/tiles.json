@@ -1,0 +1,12 @@
+{
+  "tiles": [
+    { "id": "tresor", "color": "#f1c40f", "label": "Trésor", "icon": "💰" },
+    { "id": "piege", "color": "#e74c3c", "label": "Piège", "icon": "⚔️" },
+    { "id": "portail", "color": "#8e44ad", "label": "Portail", "icon": "🌀" },
+    { "id": "autel", "color": "#9b59b6", "label": "Autel", "icon": "🕯️" },
+    { "id": "bibliotheque", "color": "#3498db", "label": "Bibliothèque", "icon": "📚" },
+    { "id": "forge", "color": "#e67e22", "label": "Forge", "icon": "🔨" },
+    { "id": "cantine", "color": "#2ecc71", "label": "Cantine", "icon": "🍖" },
+    { "id": "donjon", "color": "#2c3e50", "label": "Donjon", "icon": "🏰" }
+  ]
+}
