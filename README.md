@@ -43,7 +43,7 @@
 ## 🚀 Fonctionnalités
 
 ### 🎮 Génération de donjons
-- 8 algorithmes paramétrables en temps réel
+- 9 algorithmes paramétrables en temps réel
 - Génération instantanée avec feedback visuel
 - Annotations sur le donjon
 
@@ -307,7 +307,40 @@ dungeon-generator-app/
   }
 }
 ```
+## 🌿 L-Systems
+### Préréglages disponibles
+|Préréglage|Description|
+|----------|-----------|
+|Cercle|Génère une salle circulaire parfaite (10°, 4 itérations)| 
+|Spirale|Génère une spirale organique (15°, 5 itérations)|
+|Flocon de Koch|Génère un flocon fractal (60°, 4 itérations)|
+|Courbe de Hilbert|Génère une courbe de remplissage (90°, 4 itérations)|
+|Courbe du dragon|Génère une courbe fractale (90°, 6 itérations)|
+### Paramètres
+|Paramètre|Description|Plage|
+|---------|-----------|-----|
+|Itérations|Nombre de réécritures du L-System|1-10|
+|Taille du pas|Longueur de chaque segment|0.5-5|
+|Angle|Angle de rotation en degrés|1-90|
+|Remplir|Remplir l'intérieur de la forme|true/false|
 
+## 🧱 Gestion des collisions
+### Méthodes disponibles
+|Méthode|Description|
+|-------|-----------|
+|isWalkable(x, y)|Vérifie si une tuile est accessible|
+|isWall(x, y)|Vérifie si une tuile est un mur|
+|isBlocked(x, y)|Vérifie si une tuile est bloquée|
+|toggleCollision(x, y)|Basculer l'état de collision|
+|findPath(start, end)|Trouve un chemin (BFS)|
+|getCollisionMask()|Génère un masque de collision|
+|exportCollisionData()|Exporte les données en JSON|
+### Interface CollisionManager
+|Mode|Fonctionnalité|
+|----|--------------|
+|👁️ Vue|Cliquez sur une tuile pour voir ses informations|
+|✏️ Éditer|Cliquez pour basculer l'état de collision|
+|🗺️ Chemin|Sélectionnez départ et arrivée pour trouver un chemin|
 ---
 
 ## 🧮 Algorithmes de génération
@@ -322,7 +355,7 @@ dungeon-generator-app/
 |dla|Agrégation limitée par diffusion|
 |dla-symmetry|DLA avec symétrie axiale|
 |graph-grammar|Réécriture de graphe avec règles personnalisables|
-
+|lsystem|L-Systems (salles rondes et organiques)|
 ---
 
 ## 📝 Licence
