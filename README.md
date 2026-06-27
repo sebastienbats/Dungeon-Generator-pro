@@ -302,14 +302,14 @@ dungeon-generator-app/
 - L'algorithme Graph Grammar permet une génération très flexible grâce à des règles de réécriture de graphe.
 
 ### Règles prédéfinies
-
-### Règle Description
-- Enfilade simple Ajoute une salle en ligne droite
-- Enfilade symétrique Ajoute une salle et son symétrique
-- Couloir large Ajoute un couloir de 3 tuiles de large
-- Couloir avec porte Ajoute un couloir avec une porte à mi-chemin
-- Passage secret Ajoute un passage secret entre deux salles
-- Niveau hiérarchique Ajoute une salle de niveau supérieur
+|Règle|Description|
+|-----|-----------|
+|Enfilade simple|Ajoute une salle en ligne droite|
+|Enfilade symétrique|Ajoute une salle et son symétrique|
+|Couloir large|Ajoute un couloir de 3 tuiles de large|
+|Couloir avec porte|Ajoute un couloir avec une porte à mi-chemin|
+|Passage secret|Ajoute un passage secret entre deux salles|
+|Niveau hiérarchique|Ajoute une salle de niveau supérieur|
 
 ### Contexte des règles (ctx)
 
