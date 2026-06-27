@@ -31,10 +31,11 @@
 
 **Dungeon Generator Pro** est une application web complète permettant de générer procéduralement des donjons avec :
 
-- **8 algorithmes de génération** (dont Graph Grammar avancé)
+- **9 algorithmes de génération** (dont Graph Grammar avancé et L-Systems)
 - **Gestion des tuiles personnalisées** via une interface dédiée
 - **Gestion des calques** avec visibilité, ajout et suppression
 - **Légende interactive** affichant les tuiles utilisées
+- **Gestion des collisions** avec visualisation et édition
 - **Export SVG/PNG** avec sauvegarde sur serveur
 - **Historique** avec annulation/rétablissement
 
@@ -71,6 +72,20 @@
 - **Passages secrets** : chemins cachés entre les salles
 - **Règles entièrement redéfinissables** : l'utilisateur peut créer ses propres règles via l'éditeur intégré
 
+### 🌿 L-Systems (salles rondes)
+- **Cercle** : génère une salle circulaire parfaite
+- **Spirale** : génère une spirale organique
+- **Flocon de Koch** : génère un flocon fractal
+- **Courbe de Hilbert** : génère une courbe de remplissage
+- **Courbe du dragon** : génère une courbe fractale
+- **Paramètres ajustables** : itérations, taille du pas, angle, remplissage
+
+### 🧱 Gestion des collisions
+- **Visualisation** : affichage des zones accessibles, bloquées et des murs
+- **Édition** : basculer l'état de collision d'une tuile
+- **Recherche de chemin** : trouver le chemin le plus court (BFS)
+- **Export des données** : exporter les données de collision en JSON
+
 ### 📤 Export
 - SVG vectoriel
 - PNG haute qualité
@@ -84,34 +99,39 @@
 ```
 
 ┌─────────────────────────────────────────────────────────────────┐
-│                         FRONTEND (React)                       │
+│ FRONTEND (React) │
 ├─────────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐    ┌────────────────┐    ┌────────────────┐ │
-│  │    App.js    │───▶│DungeonControls │───▶│  DungeonViewer │ │
-│  │              │    │   (Contrôles)  │    │   (Iframe)     │ │
-│  └──────────────┘    └────────────────┘    └────────────────┘ │
-│         │                    │                      │          │
-│         ▼                    ▼                      ▼          │
-│  ┌──────────────┐    ┌────────────────┐    ┌────────────────┐ │
-│  │  TileManager │    │  LayerManager  │    │    Legend      │ │
-│  │  (Tuiles)    │    │   (Calques)    │    │  (Légende)     │ │
-│  └──────────────┘    └────────────────┘    └────────────────┘ │
-│         │                                                      │
-│         ▼                                                      │
-│  ┌─────────────────────────────────────────────────────────────┐│
-│  │              GraphGrammarEditor (Règles)                    ││
-│  └─────────────────────────────────────────────────────────────┘│
+│ ┌──────────────┐ ┌────────────────┐ ┌────────────────┐ │
+│ │ App.js │───▶│DungeonControls │───▶│ DungeonViewer │ │
+│ │ │ │ (Contrôles) │ │ (Iframe) │ │
+│ └──────────────┘ └────────────────┘ └────────────────┘ │
+│ │ │ │ │
+│ ▼ ▼ ▼ │
+│ ┌──────────────┐ ┌────────────────┐ ┌────────────────┐ │
+│ │ TileManager │ │ LayerManager │ │ Legend │ │
+│ │ (Tuiles) │ │ (Calques) │ │ (Légende) │ │
+│ └──────────────┘ └────────────────┘ └────────────────┘ │
+│ │ │ │ │
+│ ▼ ▼ ▼ │
+│ ┌─────────────────────────────────────────────────────────────┐│
+│ │ GraphGrammarEditor (Règles) ││
+│ └─────────────────────────────────────────────────────────────┘│
+│ │ │
+│ ▼ │
+│ ┌─────────────────────────────────────────────────────────────┐│
+│ │ CollisionManager (Collisions) ││
+│ └─────────────────────────────────────────────────────────────┘│
 └─────────────────────────────────────────────────────────────────┘
 │ HTTP (Fetch)
 ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                         BACKEND (Node.js)                      │
+│ BACKEND (Node.js) │
 ├─────────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐    ┌────────────────┐    ┌────────────────┐ │
-│  │  server.js   │───▶│  API Routes    │───▶│  File System  │ │
-│  │  (Express)   │    │  /api/tiles    │    │  data/tiles.json│ │
-│  └──────────────┘    │  /api/exports  │    │  exports/      │ │
-│                      └────────────────┘    └────────────────┘ │
+│ ┌──────────────┐ ┌────────────────┐ ┌────────────────┐ │
+│ │ server.js │───▶│ API Routes │───▶│ File System │ │
+│ │ (Express) │ │ /api/tiles │ │ data/tiles.json│ │
+│ └──────────────┘ │ /api/exports │ │ exports/ │ │
+│ └────────────────┘ └────────────────┘ │
 └─────────────────────────────────────────────────────────────────┘
 
 ```
